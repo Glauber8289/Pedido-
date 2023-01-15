@@ -42,15 +42,15 @@ public class Program {
       System.out.println("Nome do Produto");
       String productName = sc.next();
       System.out.println("Preço do produto");
-      Double price = sc.nextDouble();
-      Product product = new Product (productName,price);
+      double productprice = sc.nextDouble();
+      Product product = new Product (productName,productprice);
       
       System.out.println(" Digite a quantidade ");
       Integer quantity = sc.nextInt();
       
-      OrderItem pedidos = new OrderItem(quantity,price,product);
+      OrderItem pedidos = new OrderItem(quantity,productprice,product);
       
-      
+      order.addPedido(pedidos);
       
       //instanciando objeto Pedido 
 	  //Order pedido = new Order (name,email,moment,OrderStatus.valueOf(status)); 

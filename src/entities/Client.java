@@ -40,5 +40,5 @@ public Date getBirthDate() {
 public void setBirthDate(Date birthDate) {
 	this.birthDate = birthDate;
 }
-
+  
 }

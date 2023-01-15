@@ -5,20 +5,20 @@ import java.util.Date;
 import java.util.List;
 
 import entities.Enum.OrderStatus;
-
+import aplication.Program;
 
 public class Order {
 	 private Date moment;
 	 private OrderStatus status ;
 	 private Client client;
 	
-	 private List<OrderItem> items = new ArrayList<>();
+	 private List<OrderItem> pedidos = new ArrayList<>();
 
-	public Order(Date moment, OrderStatus status, Client client, List<OrderItem> items) {
+	public Order(Date moment, OrderStatus status, Client client, List<OrderItem> pedidos) {
 		this.moment = moment;
 		this.status = status;
 		this.client = client;
-		this.items = items;
+		this.pedidos = pedidos;
 	}
 
 	public Date getMoment() {
@@ -45,16 +45,30 @@ public class Order {
 		this.client = client;
 	}
 
-	public List<OrderItem> getItems() {
-		return items;
+	public List<OrderItem> getpedidos() {
+		return pedidos;
 	}
 
-	public void setItems(List<OrderItem> items) {
-		this.items = items;
+	public void setItems(List<OrderItem>pedidos) {
+		this.pedidos = pedidos;
 	} 
 		
-	 
+	 public void addPedido (OrderItem order) {
+		 pedidos.add(order);
+	 }
+	 public void removePedido (OrderItem order) {
+		pedidos.remove(order); 
+	 }
 		 
+		public double total() {
+	  	double sum=0.0;
+	  	for(OrderItem pedidos : pedidos) {
+	  		sum+=pedidos.subTotal();
+	  	}
+	  	return sum;	
+	
+	}
 }
-	 
+
+
 
