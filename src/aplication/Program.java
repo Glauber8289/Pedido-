@@ -13,7 +13,7 @@ import entities.Enum.OrderStatus;
 
 public class Program {
 
-	private static final String i = null;
+	
 
 	public static void main(String[] args) throws ParseException {
 		// TODO Auto-generated method stub
@@ -33,12 +33,13 @@ public class Program {
       System.out.println("Insira os dados do pedido");
       System.out.println("Digite o status do seu pedido  PENDIGN_PAYMENT, PROCESSING,SHIPPED,DELIVERED");
       OrderStatus status = OrderStatus.valueOf(sc.next());
-      Order order = new Order(birthDate, status, client, null);
+      Order order = new Order(birthDate, status, client);
       
       System.out.println("Quantos itens há neste pedido ");
       Integer n = sc.nextInt();
-      for(int i = 1;i<=n;i++)
+      for(int i = 1;i<=n;i++) {
       System.out.println("Insira os dados do pedido #" + i);
+      System.out.println();
       System.out.println("Nome do Produto");
       String productName = sc.next();
       System.out.println("Preço do produto");
@@ -48,10 +49,16 @@ public class Program {
       System.out.println(" Digite a quantidade ");
       Integer quantity = sc.nextInt();
       
-      OrderItem pedidos = new OrderItem(quantity,productprice,product);
+      OrderItem orderitem = new OrderItem(quantity,productprice,product);
       
-      order.addPedido(pedidos);
+      order.additems(orderitem);
+      }
+      System.out.println();
+      System.out.println("RESUMO DO PEDIDO:");
+      System.out.println(order);
       
+      
+      sc.close();
       //instanciando objeto Pedido 
 	  //Order pedido = new Order (name,email,moment,OrderStatus.valueOf(status)); 
       //pedido.addPedido(pedido);
