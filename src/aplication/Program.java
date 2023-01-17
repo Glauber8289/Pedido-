@@ -3,6 +3,7 @@ package aplication;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Scanner;
 
 import entities.Client;
@@ -17,11 +18,12 @@ public class Program {
 
 	public static void main(String[] args) throws ParseException {
 		// TODO Auto-generated method stub
-      Scanner sc = new Scanner (System.in);
+      Locale.setDefault(Locale.US);
+	  Scanner sc = new Scanner (System.in);
       SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+      
+      
       System.out.println("Digite seu nome");
-      
-      
       String name = sc.next();
       System.out.println("Digite seu email");
       String email = sc.next();
@@ -33,7 +35,7 @@ public class Program {
       System.out.println("Insira os dados do pedido");
       System.out.println("Digite o status do seu pedido  PENDIGN_PAYMENT, PROCESSING,SHIPPED,DELIVERED");
       OrderStatus status = OrderStatus.valueOf(sc.next());
-      Order order = new Order(birthDate, status, client);
+      Order order = new Order(new Date(), status, client);
       
       System.out.println("Quantos itens há neste pedido ");
       Integer n = sc.nextInt();
