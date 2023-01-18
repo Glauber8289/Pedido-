@@ -20,7 +20,7 @@ public class Program {
 		// TODO Auto-generated method stub
       Locale.setDefault(Locale.US);
 	  Scanner sc = new Scanner (System.in);
-      SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+      SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
       
       
       
@@ -62,22 +62,7 @@ public class Program {
       
       
       sc.close();
-      //instanciando objeto Pedido 
-	  //Order pedido = new Order (name,email,moment,OrderStatus.valueOf(status)); 
-      //pedido.addPedido(pedido);
-     
-      // System.out.println("Quantos itens há neste pedido ");
-      // int n = sc.nextInt();
-      // List<String> = new ArrayList<>();
-      // for(int i=1;i<=n;i++);
-     
-      //System.out.println("Insira os dados do pedido #" + i);
-      //  System.out.println("Nome do Produto");
-      //  String productname = sc.next();
-      // System.out.println("Preço do produto");
-      //Double price = sc.nextDouble();
-      //System.out.println("Digite a quantidade");
-      //int quantidade = sc.nextInt();
+
       
 	}
 
