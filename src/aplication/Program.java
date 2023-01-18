@@ -23,11 +23,12 @@ public class Program {
       SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
       
       
+      
       System.out.println("Digite seu nome");
       String name = sc.next();
       System.out.println("Digite seu email");
       String email = sc.next();
-      System.out.println("Digite a data do nascimento do pedido");
+      System.out.println("Digite a data do nascimento do pedido:");
       Date birthDate = sdf.parse(sc.next());
       Client client = new Client(name,email,birthDate);
       
@@ -37,7 +38,7 @@ public class Program {
       OrderStatus status = OrderStatus.valueOf(sc.next());
       Order order = new Order(new Date(), status, client);
       
-      System.out.println("Quantos itens há neste pedido ");
+      System.out.println("Quantos itens há neste pedido");
       Integer n = sc.nextInt();
       for(int i = 1;i<=n;i++) {
       System.out.println("Insira os dados do pedido #" + i);
@@ -48,7 +49,7 @@ public class Program {
       double productprice = sc.nextDouble();
       Product product = new Product (productName,productprice);
       
-      System.out.println(" Digite a quantidade ");
+      System.out.println("Digite a quantidade");
       Integer quantity = sc.nextInt();
       
       OrderItem orderitem = new OrderItem(quantity,productprice,product);

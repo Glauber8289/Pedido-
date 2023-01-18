@@ -12,7 +12,7 @@ public class Order {
 	 private Date moment;
 	 private OrderStatus status ;
 	 private Client client;
-	public static final 	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	public static final 	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy ");
 	 private List<OrderItem> items = new ArrayList<>();
 
 	public Order(Date moment, OrderStatus status, Client client) {
@@ -69,17 +69,17 @@ public class Order {
 		
 		public String toString() {
 			StringBuilder sb = new StringBuilder();
-			sb.append("Order moment: ");
+			sb.append("Momento do pedido: ");
 			sb.append(sdf.format(moment) + "\n");
-			sb.append("Order status: ");
+			sb.append("Status do pedido: ");
 			sb.append(status + "\n");
-			sb.append("Client: ");
+			sb.append("Dados do cliente: ");
 			sb.append(client + "\n");
-			sb.append("Order items:\n");
+			sb.append("Items incluidos no pedido:\n");
 			for (OrderItem item : items) {
 				sb.append(item + "\n");
 			}
-			sb.append("Total price: $");
+			sb.append("Preço total a pagar: $");
 			sb.append(String.format("%.2f", total()));
 			return sb.toString();
 		}

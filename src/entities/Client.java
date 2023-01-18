@@ -47,7 +47,7 @@ public void setBirthDate(Date birthDate) {
 
 @Override
 public String toString() {
-	return "name " + name + "\n" + "email " + email + "\n" +  "birthDate " + "(" + sdf.format(birthDate) + ")"+"\n";
+	return "\n"+"nome: " + name + "\n" + "email: " + email + "\n" +  "nascimento do pedido: " + "(" + sdf.format(birthDate) + ")"+"\n";
 }
   
 }
