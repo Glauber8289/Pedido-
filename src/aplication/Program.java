@@ -28,7 +28,7 @@ public class Program {
       String name = sc.next();
       System.out.println("Digite seu email");
       String email = sc.next();
-      System.out.println("Digite a data do nascimento do pedido:");
+      System.out.println("Digite a data que voce fez o pedido:");
       Date birthDate = sdf.parse(sc.next());
       Client client = new Client(name,email,birthDate);
       
