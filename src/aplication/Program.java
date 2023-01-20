@@ -20,7 +20,7 @@ public class Program {
 		// TODO Auto-generated method stub
       Locale.setDefault(Locale.US);
 	  Scanner sc = new Scanner (System.in);
-      SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+      SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
       
       
       

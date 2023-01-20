@@ -69,7 +69,7 @@ public class Order {
 		
 		public String toString() {
 			StringBuilder sb = new StringBuilder();
-			sb.append("Momento do pedido: ");
+			sb.append("Data da postagem do pedido: ");
 			sb.append(sdf.format(moment) + "\n");
 			sb.append("Status do pedido: ");
 			sb.append(status + "\n");
