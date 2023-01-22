@@ -25,7 +25,7 @@ public class Program {
       
       
       System.out.println("Digite seu nome");
-      String name = sc.next();
+      String name = sc.nextLine();
       System.out.println("Digite seu email");
       String email = sc.next();
       System.out.println("Digite a data que voce fez o pedido:");
